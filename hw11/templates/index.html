@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>просто ГЛАВНАЯ страничка сайта :-)</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <a href="/">
+                <li>главная</li>
+            </a>
+            <a href="/list">
+                <li>кандидаты</li>
+            </a>
+            <a href="/search/">
+                <li>поиск по имени кандидата</li>
+            </a>
+            <a href="/skill/">
+                <li>поиск по навыкам кандидата</li>
+            </a>
+        </ul>
+    </nav>
+    <div class="wrapper_content">
+        <div>
+            <div class="anytext"><span>&#128578;</span>страничка хоть и главная, но сделана так, от нечего делать <span>&#128579;</span></div>
+            <a href = "https://ru.wikipedia.org/wiki/Юнг,_Карл_Густав" target="_blank">
+                <h1>Карл Густав Юнг</h1>
+            </a>
+                <img class = "main_foto" src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/1-carl-gustav-jung-portrait-suzanns-art.jpg" alt="Карл Густав Юнг"/>
+        </div>
+        <strong>Дата рождения: 26 июля 1875г.</strong>
+        <p>Швейцарский психиатр и педагог, основоположник одного из направлений глубинной психологии — <em>аналитической психологии.</em></p>
+        <p>Юнг развил учение о коллективном бессознательном, в образах (архетипах) которого видел источник общечеловеческой символики,<br/>
+            в том числе мифов и сновидений («Метаморфозы и символы либидо»).</p>
+        <p><mark>Цель психотерапии</mark> согласно Юнгу — осуществление индивидуации личности.</p>
+        <div class="nothing">
+            <del>
+                далее идет просто перечеркнутый текст, который не несет никакой смысловой нагрузи,
+                и напечатан просто для того чтобы было хоть какое-небудь наполнение,
+                поэтому читать его бессмысленно
+            </del>
+        </div>
+    </div>
+
+</body>
+</html>
+

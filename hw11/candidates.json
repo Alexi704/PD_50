@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "Adela Hendricks",
+    "picture": "https://i.picsum.photos/id/399/200/200.jpg?hmac=LCWCFY16G50iBPpqU6-FCw79ovEqvznYsxoQNCIldV8",
+    "position": "Go разработчик",
+    "gender": "female",
+    "age": 40,
+    "skills": "go, python"
+  },
+  {
+    "id": 2,
+    "name": "Sheri Torres",
+    "picture": "https://i.picsum.photos/id/91/200/200.jpg?hmac=y-8iGl9dOkbHqADPlWuS-rWBHNBWWXlzKcsTDu2WeQo",
+    "position": "Delphi developer",
+    "gender": "female",
+    "age": 26,
+    "skills": "Delphi, pascal, fortran, basic"
+  },
+  {
+    "id": 3,
+    "name": "Burt Stein",
+    "picture": "https://i.picsum.photos/id/804/200/200.jpg?hmac=73qw3Bnt67aOsdWd033BvfX9Gq0gIJ6FSL3Dp3gA97E",
+    "position": "Team lead",
+    "gender": "male",
+    "age": 33,
+    "skills": "делегирование, пользоваться календарем, обсуждать важные вопросы"
+  },
+  {
+    "id": 4,
+    "name": "Bauer Adkins",
+    "picture": "https://i.picsum.photos/id/455/200/200.jpg?hmac=YZhCbBjCYF0ha5dR9ElToDVwWcw05w0e4pAv5S9nZYg",
+    "position": "CTO",
+    "gender": "male",
+    "age": 37,
+    "skills": "very important face"
+  },
+  {
+    "id": 5,
+    "name": "Day Holloway",
+    "picture": "https://i.picsum.photos/id/841/200/200.jpg?hmac=jAPzaXgN_B37gVuIQvmtuRCmYEC0lJP86OZexH1yam4",
+    "position": "HR manager",
+    "gender": "male",
+    "age": 35,
+    "skills": "LinkedIn, telegram, spam, spam, spam"
+  },
+  {
+    "id": 6,
+    "name": "Austin Cochran",
+    "picture": "https://i.picsum.photos/id/602/200/200.jpg?hmac=UQpVCHEMGI1-S-kt8OQLic6TfuG2elfLbLTNDl1mqZE",
+    "position": "python-develop",
+    "gender": "male",
+    "age": 26,
+    "skills": "python, html"
+  },
+  {
+    "id": 7,
+    "name": "Sheree Love",
+    "picture": "https://i.picsum.photos/id/770/200/200.jpg?hmac=QFpEnsRd_HVWziMxXltLr7icjRJhyhL7vsBAwyXrotA",
+    "position": "Django developer",
+    "gender": "female",
+    "age": 33,
+    "skills": "Python, Django, flask"
+  }
+]

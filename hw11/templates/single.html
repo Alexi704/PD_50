@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ name }}</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <a href="/">
+                <li>главная</li>
+            </a>
+            <a href="/list">
+                <li>кандидаты</li>
+            </a>
+            <a href="/search/">
+                <li>поиск по имени кандидата</li>
+            </a>
+            <a href="/skill/">
+                <li>поиск по навыкам кандидата</li>
+            </a>
+        </ul>
+    </nav>
+
+    <div class="wrapper_content">
+        <h1>{{ name }}</h1>
+
+        <div class="wrapper_single_user">
+            <div class="user_img">
+                <img src="{{ u_img }}" width="160">
+            </div>
+            <div class="user_skill"><span>Сейчас работает:</span>  {{ position }}</div>
+            <div class="user_skill"><span>Возраст:</span>  {{ age }}</div>
+            <div class="user_skill"><span>Пол:</span>  {{ gender }}</div>
+            <div class="user_skill"><span>Навыки:</span>  {{ skill }}</div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+

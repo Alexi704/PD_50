@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Все кандидаты</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <a href="/">
+                <li>главная</li>
+            </a>
+            <a href="/list">
+                <li>кандидаты</li>
+            </a>
+            <a href="/search/">
+                <li>поиск по имени кандидата</li>
+            </a>
+            <a href="/skill/">
+                <li>поиск по навыкам кандидата</li>
+            </a>
+        </ul>
+    </nav>
+
+    <div class="wrapper_content">
+        <h1>Список кандидатов:</h1>
+
+
+        {% for uid, name, u_img in user_qualities %}
+        <div class="wrapper_user">
+            <div class="user_img">
+                <img src="{{ u_img }}" width="40">
+            </div>
+            <div class="user_name"><a href="/candidate/{{uid}}"><span></span>{{uid}}). {{ name }}</a></div>
+
+        </div>
+         <hr/>
+        {% endfor %}
+
+
+
+    </div>
+
+</body>
+</html>
+

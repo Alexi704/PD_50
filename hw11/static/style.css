@@ -1,0 +1,107 @@
+body {
+    padding: 20px;
+    background-color: rgba(161, 248, 237, 0.5);
+    font-family: Arial;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    padding: 20px;
+    font-family: "Bookman Old Style", Arial;
+    font-size: 20px;
+}
+
+.anytext {
+    font-family: Georgia;
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-style: italic;
+    text-align: center;
+}
+.anytext span {
+    font-style: normal;
+    font-size: 14px;
+}
+.wrapper_content {
+    max-width: 800px;
+    margin: 12px auto;
+    border: dotted 2px rgba(2, 60, 252, 0.7);
+    border-radius: 20px;
+    padding: 20px 40px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover{
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+.main_foto {
+    width: 260px;
+    border-radius: 80px 0;
+
+}
+
+.nothing {
+    font-size: 8px;
+    font-weight: bold;
+    letter-spacing: 8px;
+    text-align: justify;
+}
+
+nav {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0 12px;
+    list-style: none;
+}
+
+.wrapper_user {
+    min-height: 60px;
+}
+
+.wrapper_single_user {
+    min-height: 180px;
+}
+
+.user_name {
+    font-family: "Bookman Old Style", Arial;
+    font-weight: bold;
+    font-size: 22px;
+    padding-top: 12px;
+}
+
+.user_name span{
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.user_skill {
+    padding-top: 12px;
+    font-family: "Bookman Old Style", Arial;
+    font-weight: bold;
+    font-size: 17px;
+    color: #010126;
+}
+
+.user_skill span{
+    font-weight: normal;
+    font-size: 14px;
+    color: #000000;
+}
+
+.user_img {
+    float: left;
+    padding: 12px 12px 0 0;
+}
