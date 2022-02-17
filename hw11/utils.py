@@ -1,4 +1,5 @@
 import json
+from pprint import pprint as pp
 
 with open('candidates.json', 'r', encoding='utf-8') as file:
     content_json = json.load(file)
@@ -36,7 +37,8 @@ def get_candidates_by_skill(skill_name):
     """возвращает список всех кандидатов по скилам"""
     candidate = []
     for item in content_json:
-        if skill_name in item['skills'].lower().split(','):
+        if skill_name in item['skills'].lower().split(', '):
             candidate.append(
                 [item['name'], item['picture'], item['position'], item['gender'], item['age'], item['skills']])
     return candidate
+
