@@ -25,6 +25,7 @@ def get_candidate(uid):
 def get_candidates_by_name(candidate_name):
     """возвращает список всех кандидатов по заданному имени"""
     candidate = []
+    candidate_name = candidate_name.lower().strip()
     for item in content_json:
         if candidate_name in item['name'].lower():
             candidate.append(
