@@ -27,15 +27,17 @@
     <div class="wrapper_content">
             <h1>Найдены:</h1>
 
-            {% for name, u_img, position, gender, age, skill in search_candidate: %}
-            <div class="wrapper_user">
+            {% for uid, name, u_img, position, gender, age, skill in search_candidate: %}
+            <div class="wrapper_user_skill">
                 <div class="user_img">
                     <img src="{{ u_img }}" width="120">
                 </div>
-                <div class="user_name">{{ name }}</div>
+                <div class="user_name"><a href="/candidate/{{uid}}">{{ name }}</a></div>
+                <!--
                 <div class="user_skill"><span>Сейчас работает:</span>  {{ position }}</div>
                 <div class="user_skill"><span>Возраст:</span>  {{ age }}</div>
                 <div class="user_skill"><span>Пол:</span>  {{ gender }}</div>
+                -->
                 <div class="user_skill"><span>Навыки:</span>  {{ skill }}</div>
             </div>
              <hr/>

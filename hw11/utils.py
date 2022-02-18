@@ -29,7 +29,7 @@ def get_candidates_by_name(candidate_name):
     for item in content_json:
         if candidate_name in item['name'].lower():
             candidate.append(
-                [item['name'], item['picture'], item['position'], item['gender'], item['age'], item['skills']])
+                [item['id'], item['name'], item['picture'], item['position'], item['gender'], item['age'], item['skills']])
     return candidate
 
 
@@ -40,7 +40,7 @@ def get_candidates_by_skill(skill_name, count_limit):
     for item in content_json:
         if skill_name in item['skills'].lower().split(', '):
             candidate.append(
-                [item['name'], item['picture'], item['position'], item['gender'], item['age'], item['skills']])
+                [item['id'], item['name'], item['picture'], item['position'], item['gender'], item['age'], item['skills']])
             counter += 1
         if counter >= count_limit:
             break

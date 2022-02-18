@@ -74,7 +74,12 @@ nav a {
 .wrapper_single_user {
     min-height: 180px;
 }
-
+.wrapper_user_search {
+    min-height: 140px;
+}
+.wrapper_user_skill{
+    min-height: 140px;
+}
 .user_name {
     font-family: "Bookman Old Style", Arial;
     font-weight: bold;
