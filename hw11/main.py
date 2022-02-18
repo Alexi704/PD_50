@@ -38,9 +38,10 @@ def page_search_skill():
     return render_template('skill_begin.html')
 
 
+count_limit = 3 #указываем какой максимальный список будет построен
 @app.route('/skill/<skill_name>')
 def page_search_skill_candidate(skill_name):
-    search_candidate = utils.get_candidates_by_skill(skill_name)
+    search_candidate = utils.get_candidates_by_skill(skill_name, count_limit)
     return render_template('skill.html', search_candidate=search_candidate)
 
 

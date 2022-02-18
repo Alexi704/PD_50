@@ -33,11 +33,15 @@ def get_candidates_by_name(candidate_name):
     return candidate
 
 
-def get_candidates_by_skill(skill_name):
+def get_candidates_by_skill(skill_name, count_limit):
     """возвращает список всех кандидатов по скилам"""
     candidate = []
+    counter = 0
     for item in content_json:
         if skill_name in item['skills'].lower().split(', '):
             candidate.append(
                 [item['name'], item['picture'], item['position'], item['gender'], item['age'], item['skills']])
+            counter += 1
+        if counter >= count_limit:
+            break
     return candidate
