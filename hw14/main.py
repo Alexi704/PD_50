@@ -1,7 +1,5 @@
 from flask import Flask, render_template
-
 from utils import film_by_name, film_year_to_year, film_by_rating, film_genre
-
 app = Flask(__name__)
 
 
