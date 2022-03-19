@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>фильмы жанра: {{genre}}</title>
+</head>
+<body>
+<!--код для возвращения значения в формате JSON-->
+<!--    {{result_film_genre}}   -->
+
+    {% for item in result_film_genre %}
+        <p>{{item}}</p>
+    {% endfor %}
+
+</body>
+</html>
