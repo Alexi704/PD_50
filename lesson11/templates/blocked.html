@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Проверка на блокировку</title>
+</head>
+<body>
+    <h1>Ваши настройки доступа</h1>
+
+    {% if is_blocked %}
+        <p>Вам закрыт доступ</p>
+    {% else %}
+        <p>Вам открыт доступ</p>
+    {% endif %}
+</body>
+</html>
