@@ -32,3 +32,4 @@ class GenresView(Resource):
 
     def post(self):
         return genres_service.create(request.json), 201
+

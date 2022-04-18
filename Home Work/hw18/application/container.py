@@ -26,3 +26,4 @@ genres_service = GenresService(genres_dao, genres_schema)
 directors_schema = DirectorSchema()
 directors_dao = DirectorsDAO(db.session)
 directors_service = DirectorsService(directors_dao, directors_schema)
+

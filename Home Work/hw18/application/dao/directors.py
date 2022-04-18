@@ -33,3 +33,4 @@ class DirectorsDAO(BaseDAO):
         if result != 1:
             raise ValidationError(f'Movie with id {uid} not found.')
         self.session.commit()
+

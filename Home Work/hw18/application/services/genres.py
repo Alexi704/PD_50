@@ -4,3 +4,4 @@ from lib.service import BaseService
 
 class GenresService(BaseService[GenresDAO]):
     pass
+

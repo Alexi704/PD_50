@@ -7,3 +7,4 @@ class GenreSchema(Schema):
     # name = fields.Str()
     name = fields.Str(validate=Length(min=1))  # Length - валидатор длинны
 
+

@@ -37,3 +37,4 @@ class MoviesView(Resource):
 
     def post(self):
         return movies_service.create(request.json), 201
+

@@ -32,3 +32,4 @@ class DirectorsView(Resource):
 
     def post(self):
         return directors_service.create(request.json), 201
+

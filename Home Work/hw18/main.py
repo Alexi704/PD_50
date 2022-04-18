@@ -30,3 +30,4 @@ if __name__ == '__main__':
     app_ = creat_app()
     configure_app(app_)
     app_.run()
+

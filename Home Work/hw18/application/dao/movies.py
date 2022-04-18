@@ -39,3 +39,4 @@ class MoviesDAO(BaseDAO):
 
     def get_by_genre_id(self, genre_id: int):
         return self.session.query(Movie).filter(Movie.genre_id == genre_id)
+

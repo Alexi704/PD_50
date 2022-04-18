@@ -25,3 +25,4 @@ class BaseService(Generic[T]):
 
     def delete(self, uid: int):
         self.dao.delete(uid)
+

@@ -27,3 +27,4 @@ class Movie(BaseModal):
 
     director = relationship('Director')
     genre = relationship('Genre')
+

@@ -18,3 +18,4 @@ class BaseDAO:
     def delete(self, uid: int):
         raise NotImplementedError
 
+

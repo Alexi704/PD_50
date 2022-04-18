@@ -24,3 +24,4 @@ class MovieSchema(Schema):
         if data['title'] == 'test':
             raise ValidationError('Title cannot be "test"', field_name='title')
         return data
+
