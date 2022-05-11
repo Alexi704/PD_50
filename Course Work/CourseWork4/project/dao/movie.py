@@ -19,7 +19,6 @@ class MovieDAO:
         status = request.args.get('status')
         # проверка запроса в строке ?page=2 (любое число)
         page = request.args.get('page')
-        print('LIMIT PAGE --> ', type(page), page)
 
         if status == 'new' and page is not None:
             page = int(page)
