@@ -1,4 +1,5 @@
 from flask_restx import abort, Namespace, Resource
+from flask import request
 
 from project.exceptions import ItemNotFound
 from project.services import MoviesService
@@ -12,6 +13,9 @@ class MoviesView(Resource):
     @movies_ns.response(200, "OK")
     def get(self):
         """Get all movies"""
+        response = request.args.get('status')
+        if response == 'new':
+            return MoviesService(db.session).get_all_movies_desc()
         return MoviesService(db.session).get_all_movies()
 
 

@@ -1,3 +1,4 @@
+from sqlalchemy import desc
 from sqlalchemy.orm.scoping import scoped_session
 
 from project.dao.models import Movie
@@ -12,3 +13,7 @@ class MovieDAO:
 
     def get_all(self):
         return self._db_session.query(Movie).all()
+
+    def get_all_desc(self):
+        return self._db_session.query(Movie).order_by(desc(Movie.year))
+

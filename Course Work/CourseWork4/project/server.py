@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_cors import CORS
 from flask_restx import Api
 
@@ -20,6 +20,11 @@ cors = CORS()
 def create_app(config_obj):
     app = Flask(__name__)
     app.config.from_object(config_obj)
+
+    # Для первого варианта запуска стенда раскоментируем следующие три строчки
+    # @app.route('/')
+    # def index():
+    #     return render_template('index.html')
 
     cors.init_app(app)
     db.init_app(app)

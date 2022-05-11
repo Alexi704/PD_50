@@ -18,6 +18,8 @@ class BaseConfig:
     PWD_HASH_SALT = base64.b64decode("A-pinch-OF-sAlt!")
     PWD_HASH_ITERATIONS = 100_000
 
+    STATUS_FILM_NEW = 1 # films released not earlier than ... years
+
 
 class TestingConfig(BaseConfig):
     TESTING = True
