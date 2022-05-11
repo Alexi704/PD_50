@@ -15,7 +15,4 @@ class MoviesService(BaseService):
         movie = MovieDAO(self._db_session).get_all()
         return MovieSchema(many=True).dump(movie)
 
-    def get_all_movies_desc(self):
-        movie = MovieDAO(self._db_session).get_all_desc()
-        return MovieSchema(many=True).dump(movie)
 
