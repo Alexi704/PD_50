@@ -11,8 +11,8 @@ class UserDAO:
     def get_all(self):
         return self.session.query(User).all()
 
-    def create(self, genre_d):
-        ent = User(**genre_d)
+    def create(self, user_d):
+        ent = User(**user_d)
         self.session.add(ent)
         self.session.commit()
         return ent

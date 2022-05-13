@@ -15,4 +15,4 @@ class User(BaseMixin, db.Model):
 
 
     def __repr__(self):
-        return f"<User '{self.name.title()}'>"
+        return f"<User: '{self.name.title()}'>"

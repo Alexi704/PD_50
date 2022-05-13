@@ -15,10 +15,10 @@ class BaseConfig:
     TOKEN_EXPIRE_MINUTES = 15
     TOKEN_EXPIRE_DAYS = 130
 
+    JWT_ALGORITM: str = 'HS256'
+    PWD_HASH_NAME = 'sha256'
     PWD_HASH_SALT = base64.b64decode("A-pinch-OF-sAlt!")
     PWD_HASH_ITERATIONS = 100_000
-
-    STATUS_FILM_NEW = 1 # films released not earlier than ... years
 
 
 class TestingConfig(BaseConfig):
