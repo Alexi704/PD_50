@@ -86,10 +86,19 @@ Content-Type: application/json
 }
 
 ### PUT запрос изменение пароля (по id пользователя)
-PUT http://127.0.0.1:5000/user/password/1
+PUT http://127.0.0.1:5000/user/password/2
 Content-Type: application/json
 
 {
     "old_password": "12345",
     "new_password": "00000"
+}
+
+### PUT запрос изменение пароля (по id пользователя)
+PUT http://127.0.0.1:5000/user/password/2
+Content-Type: application/json
+
+{
+    "old_password": "00000",
+    "new_password": "12345"
 }

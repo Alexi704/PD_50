@@ -33,13 +33,16 @@ class UsersService(BaseService):
         return user_update
 
     def change_password(self, user_d):
+        new_password = user_d.get('new_password')
+        old_password = user_d.get('old_password')
+        old_password_hash = get_hash_password(old_password)
+        user = UserDAO(self._db_session).get_by_id(user_d['id'])
+        password_db = user.password
 
-        if user_d['old_password'] is not None:
-            old_password = get_hash_password(user_d['old_password'])
-            password_db = UserDAO.get_by_id(user_d['password'])
+        if old_password_hash == password_db:
+            user_d['password'] = get_hash_password(new_password)
+            user_update = UserDAO(self._db_session).update(user_d)
 
-            if old_password == password_db:
-                user_update = UserDAO(self._db_session).update_password(user_d)
-                return user_update
+            return user_update, print(f"Пароль успешно сменен!")
 
-        return "Неверный пароль..."
+        return print(f"НЕВЕРНО введен первоначальный пароль!")

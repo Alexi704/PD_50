@@ -8,9 +8,9 @@ from project.setup_db import db
 user_ns = Namespace("user")
 
 
-@user_ns.route("/<int:user_id>")
 @user_ns.response(200, "OK")
 @user_ns.response(404, "User not found")
+@user_ns.route("/<int:user_id>")
 class UserView(Resource):
     def get(self, user_id: int):
         """Получение информации о пользователе по его id"""
@@ -28,14 +28,15 @@ class UserView(Resource):
         UsersService(db.session).update(req_json)
         return "", 204
 
+
+@user_ns.response(200, "OK")
+@user_ns.response(404, "User not found")
 @user_ns.route("/password/<int:user_id>")
-class UserView(Resource):
-    @user_ns.response(200, "OK")
-    @user_ns.response(404, "User not found")
+class UserPswdView(Resource):
     def put(self, user_id: int):
         """ смена пароля пользоватя """
         req_json = request.json
         if "id" not in req_json:
             req_json["id"] = user_id
-        UsersService(db.session).change_password(request.json)
+        UsersService(db.session).change_password(req_json)
         return "", 204
