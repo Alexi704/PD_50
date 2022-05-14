@@ -11,7 +11,7 @@ class AuthDAO:
         user_data['password'] = get_hash_password(user_data['password'])
         return self.create(user_data)
 
-    def get_by_username(self, username):
-        res = self.session.query(User).filter(User.username == username).first()
+    def get_by_username(self, user_data):
+        res = self.session.query(User).filter(User.name == user_data).first()
         return res
 

@@ -1,5 +1,7 @@
 from flask_restx import Namespace, Resource
 from flask import request
+
+from project.dao import AuthDAO
 from project.services import AuthService, UsersService
 from project.setup_db import db
 
@@ -18,7 +20,8 @@ class AuthRegRegView(Resource):
 class AuthView(Resource):
 
     def post(self):
-        return AuthService.login(request.json)
+        return AuthService(db.session).login(request.json)
 
     def put(self):
         return AuthService.get_new_tokens(request.json['refresh_token'])
+

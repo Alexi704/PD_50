@@ -28,14 +28,22 @@ POST http://127.0.0.1:5000/auth/register
 Content-Type: application/json
 
 {
-    "email" : "email22@email.ru",
+    "email" : "email7@email.ru",
     "password" : "12345",
-    "name" : "Hony",
-    "surname" : "Go",
-    "favorite_genre_id": 2
+    "name" : "Sony",
+    "surname" : "Li",
+    "favorite_genre_id": 1
 }
 
 
-###
+### POST запрос на авторизацию, с получением access_token и refresh_token
+POST http://127.0.0.1:5000/auth/login
+Content-Type: application/json
+
+{
+    "name" : "Sony",
+    "password" : "12345"
+}
+
 
 

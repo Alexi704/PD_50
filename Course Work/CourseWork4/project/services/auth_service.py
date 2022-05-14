@@ -1,19 +1,19 @@
 from flask_restx import abort
 from project.dao import AuthDAO
-from project.exceptions import ItemNotFound
-from project.schemas.user import UserSchema
 from project.services.base import BaseService
+from sqlalchemy.orm.scoping import scoped_session
 from project.utils import get_hash_password, generate_tokens, decode_token
 
 
-class AuthService:
-    def __init__(self, dao: AuthDAO):
-        self.dao = dao
+class AuthService(BaseService):
 
+    def __init__(self, session: scoped_session):
+        super().__init__(session)
 
     def login(self, data: dict):
-        user_data = self.dao.get_by_username(data['username'])
-        if user_data.username is None:
+        user_data = AuthDAO(self._db_session).get_by_username(data['name'])
+        print(user_data)
+        if user_data.name is None:
             abort(401, message='... User NOT found ...')
 
         hashed_password = get_hash_password(data['password'])
@@ -22,8 +22,7 @@ class AuthService:
 
         tokens: dict = generate_tokens(
             {
-                'username': data['username'],
-                'role': user_data.role,
+                'name': data['name'],
             }
         )
 
@@ -34,8 +33,7 @@ class AuthService:
 
         tokens = generate_tokens(
             data={
-                'username': decoded_token['username'],
-                'role': decoded_token['role']
+                'name': decoded_token['name'],
             }
         )
 
