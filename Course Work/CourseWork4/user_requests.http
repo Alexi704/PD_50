@@ -46,4 +46,14 @@ Content-Type: application/json
 }
 
 
+### PUT запрос на смену токена
+###  1) подкидываем ДЕЙСВТУЮЩИЙ refresh_token,
+###  2) получаем новую пару access_token, refresh_token
+PUT http://127.0.0.1:5000/auth/login
+Content-Type: application/json
+
+{
+    "refresh_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiU29ueSIsImV4cCI6MTY2Mzc0NzE5MCwicmVmcmVzaF90b2tlbiI6dHJ1ZX0.S-vFrECfttc3ieWmoLU5Rxcbt3ZVoDotkARkUVlFrck"
+}
+
 

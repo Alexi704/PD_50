@@ -73,7 +73,7 @@ def decode_token(token: str, refresh_token: bool=False):
 
     # Проверяем то, что это не refresh_token
     if decoded_token['refresh_token'] != refresh_token:
-        abort(400, message='Got wrong token type')
+        abort(400, message='Got wrong token type (это не refresh_token)')
 
     return decoded_token
 
