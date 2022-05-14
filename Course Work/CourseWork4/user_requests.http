@@ -62,25 +62,34 @@ GET http://127.0.0.1:5000/user/2
 Content-Type: application/json
 
 
-### PATCH запрос на частичное (либо полное) изменение данных пользователя (по его id)
-PATCH http://127.0.0.1:5000/user/2
+### PATCH запрос на частичное (либо полное) изменение данных (кроме пароля) пользователя (по его id)
+PATCH http://127.0.0.1:5000/user/1
 Content-Type: application/json
 
 {
-    "email": "Ron@email.ru",
-    "surname": "Ron2",
-    "name": "Ron"
+    "surname": "Toto",
+    "name": "Toto",
+    "favorite_genre_id": 2
 }
 
-### PATCH запрос на частичное (либо полное) изменение данных пользователя (по его id)
-PATCH http://127.0.0.1:5000/user/2
+
+### PATCH запрос на частичное (либо полное) изменение данных (кроме пароля) пользователя (по его id)
+PATCH http://127.0.0.1:5000/user/1
 Content-Type: application/json
 
 {
     "email": "12345@email.ru",
     "password": "12345",
-    "favorite_genre_id": 1,
-    "surname": "Miledi",
-    "name": "Miledi"
+    "favorite_genre_id": 2,
+    "surname": "Mila",
+    "name": "Mila"
 }
 
+### PUT запрос изменение пароля (по id пользователя)
+PUT http://127.0.0.1:5000/user/password/1
+Content-Type: application/json
+
+{
+    "old_password": "12345",
+    "new_password": "00000"
+}

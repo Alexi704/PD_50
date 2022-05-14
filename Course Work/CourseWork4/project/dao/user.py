@@ -36,11 +36,18 @@ class UserDAO:
             user.surname = user_d.get("surname")
         if user_d.get("email"):
             user.email = user_d.get("email")
+        # пароль надо менять отдельно
         if user_d.get("password"):
             user.password = user_d.get("password")
         if user_d.get("favorite_genre_id"):
             user.favorite_genre_id = user_d.get("favorite_genre_id")
 
+        self._db_session.add(user)
+        self._db_session.commit()
+
+    def update_password(self, user_d):
+        user = self.get_by_id(user_d.get("id"))
+        user.password = user_d.get("new_password")
         self._db_session.add(user)
         self._db_session.commit()
 
