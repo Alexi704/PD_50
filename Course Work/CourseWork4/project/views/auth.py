@@ -1,9 +1,6 @@
 from flask_restx import Namespace, Resource
 from flask import request
-
-from project.dao.models import User
 from project.services import AuthService, UsersService
-from project.services.base import BaseService
 from project.setup_db import db
 
 auth_ns = Namespace('auth')
@@ -13,7 +10,7 @@ auth_ns = Namespace('auth')
 class AuthRegRegView(Resource):
     def post(self):
         req_json = request.json
-        user = UsersService.create(req_json)
+        user = UsersService(db.session).create(req_json)
         return f"Добавлен в базу: пользователь - {user.name}", 201
 
 

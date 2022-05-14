@@ -1,0 +1,41 @@
+### GET запрос по фильмам (с пагинацией и сортировкой)
+GET http://127.0.0.1:5000/movies/?status=new&page=2
+Content-Type: application/json
+
+
+### GET запрос по фильмам (с сортировкой)
+GET http://127.0.0.1:5000/movies/?status=new
+Content-Type: application/json
+
+
+### GET запрос по режиссерам (с пагинацией)
+GET http://127.0.0.1:5000/directors/?page=2
+Content-Type: application/json
+
+
+### GET запрос по жанрам (с пагинацией)
+GET http://127.0.0.1:5000/genres/?page=2
+Content-Type: application/json
+
+
+### GET запрос по пользователям
+GET http://127.0.0.1:5000/users/
+Content-Type: application/json
+
+
+### POST запрос на добавление пользователя
+POST http://127.0.0.1:5000/auth/register
+Content-Type: application/json
+
+{
+    "email" : "email22@email.ru",
+    "password" : "12345",
+    "name" : "Hony",
+    "surname" : "Go",
+    "favorite_genre_id": 2
+}
+
+
+###
+
+
