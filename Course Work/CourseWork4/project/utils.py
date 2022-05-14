@@ -88,7 +88,7 @@ def auth_required(func):
         decoded_token = decode_token(token)
 
         # Проверяем, что пользователь существует
-        if not decoded_token['username']:
+        if not decoded_token['name']:
             abort(401)
 
         return func(*args, **kwargs)
@@ -108,7 +108,7 @@ def admin_access_required(func):
         #     abort(403)
 
         # Проверяем, что пользователь существует
-        if not decoded_token['username']:
+        if not decoded_token['name']:
             abort(401)
 
         return func(*args, **kwargs)

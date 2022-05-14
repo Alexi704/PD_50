@@ -1,11 +1,21 @@
+### POST запрос на авторизацию, с получением access_token и refresh_token
+POST http://127.0.0.1:5000/auth/login
+Content-Type: application/json
+
+{
+    "name" : "Anna",
+    "password" : "12345"
+}
+
 ### GET запрос по фильмам (с пагинацией и сортировкой)
 GET http://127.0.0.1:5000/movies/?status=new&page=2
 Content-Type: application/json
-
+Authorization:  Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQW5uYSIsImV4cCI6MTY1MjU0NTE0OCwicmVmcmVzaF90b2tlbiI6ZmFsc2V9.3ocu1NaZhktm45paxgKH7j-8zqSOphuxfub_DlS4ryM
 
 ### GET запрос по фильмам (с сортировкой)
 GET http://127.0.0.1:5000/movies/?status=new
 Content-Type: application/json
+Authorization:  Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQW5uYSIsImV4cCI6MTY1MjU0NTE0OCwicmVmcmVzaF90b2tlbiI6ZmFsc2V9.3ocu1NaZhktm45paxgKH7j-8zqSOphuxfub_DlS4ryM
 
 
 ### GET запрос по режиссерам (с пагинацией)
