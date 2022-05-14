@@ -25,3 +25,9 @@ class UsersService(BaseService):
         user_d['password'] = get_hash_password(user_d['password'])
         new_user = UserDAO(self._db_session).create(user_d)
         return new_user
+
+    def update(self, user_d):
+        if user_d['password'] is not None:
+            user_d['password'] = get_hash_password(user_d['password'])
+        user_update = UserDAO(self._db_session).update(user_d)
+        return user_update

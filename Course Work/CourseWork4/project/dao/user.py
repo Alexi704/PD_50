@@ -27,3 +27,20 @@ class UserDAO:
         self._db_session.add(ent)
         self._db_session.commit()
         return ent
+
+    def update(self, user_d):
+        user = self.get_by_id(user_d.get("id"))
+        if user_d.get("name"):
+            user.name = user_d.get("name")
+        if user_d.get("surname"):
+            user.surname = user_d.get("surname")
+        if user_d.get("email"):
+            user.email = user_d.get("email")
+        if user_d.get("password"):
+            user.password = user_d.get("password")
+        if user_d.get("favorite_genre_id"):
+            user.favorite_genre_id = user_d.get("favorite_genre_id")
+
+        self._db_session.add(user)
+        self._db_session.commit()
+
