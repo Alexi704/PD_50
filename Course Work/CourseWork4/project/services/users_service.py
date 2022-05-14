@@ -32,7 +32,6 @@ class UsersService(BaseService):
         user_update = UserDAO(self._db_session).update(user_d)
         return user_update
 
-
     def change_password(self, user_d):
 
         if user_d['old_password'] is not None:

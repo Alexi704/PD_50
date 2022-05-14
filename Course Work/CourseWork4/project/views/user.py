@@ -9,9 +9,9 @@ user_ns = Namespace("user")
 
 
 @user_ns.route("/<int:user_id>")
+@user_ns.response(200, "OK")
+@user_ns.response(404, "User not found")
 class UserView(Resource):
-    @user_ns.response(200, "OK")
-    @user_ns.response(404, "User not found")
     def get(self, user_id: int):
         """Получение информации о пользователе по его id"""
         try:
@@ -20,8 +20,6 @@ class UserView(Resource):
             abort(404, message="User not found")
 
 
-    @user_ns.response(200, "OK")
-    @user_ns.response(404, "User not found")
     def patch(self, user_id: int):
         """ изменяем информацию о пользователе через его id (кроме пароля)"""
         req_json = request.json
@@ -31,7 +29,7 @@ class UserView(Resource):
         return "", 204
 
 @user_ns.route("/password/<int:user_id>")
-class UserChPswdView(Resource):
+class UserView(Resource):
     @user_ns.response(200, "OK")
     @user_ns.response(404, "User not found")
     def put(self, user_id: int):

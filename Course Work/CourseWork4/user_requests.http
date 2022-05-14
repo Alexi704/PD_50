@@ -28,10 +28,10 @@ POST http://127.0.0.1:5000/auth/register
 Content-Type: application/json
 
 {
-    "email" : "email7@email.ru",
+    "email" : "email8@email.ru",
     "password" : "12345",
-    "name" : "Sony",
-    "surname" : "Li",
+    "name" : "Repper",
+    "surname" : "Repper",
     "favorite_genre_id": 1
 }
 
@@ -78,11 +78,11 @@ PATCH http://127.0.0.1:5000/user/1
 Content-Type: application/json
 
 {
-    "email": "12345@email.ru",
+    "email": "0000@email.ru",
     "password": "12345",
     "favorite_genre_id": 2,
-    "surname": "Mila",
-    "name": "Mila"
+    "surname": "Uuuu",
+    "name": "Uuuu"
 }
 
 ### PUT запрос изменение пароля (по id пользователя)
