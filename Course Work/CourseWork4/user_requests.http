@@ -69,7 +69,7 @@ Content-Type: application/json
 {
     "surname": "Toto",
     "name": "Toto",
-    "favorite_genre_id": 2
+    "favorite_genre_id": 3
 }
 
 
@@ -80,7 +80,7 @@ Content-Type: application/json
 {
     "email": "0000@email.ru",
     "password": "12345",
-    "favorite_genre_id": 2,
+    "favorite_genre_id": 1,
     "surname": "Uuuu",
     "name": "Uuuu"
 }
