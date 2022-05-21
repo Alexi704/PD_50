@@ -49,7 +49,6 @@ class Store(Storage):
                 self.items[name] = self.items[name] - count
                 return True
             else:
-                # print(f'Нет такого количества товара. Максимум {self.get_free_space()} ')
                 print(f'Нет такого количества товара. Максимум {self.items[name]} ')
 
         else:
