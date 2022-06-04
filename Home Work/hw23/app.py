@@ -42,11 +42,11 @@ def perform_query():
         val_2 = request.args['val_2']
         file_name = request.args['file_name']
     except:
-        return BadRequest
+        return BadRequest(description='...incorrectly set arguments...')
 
     path_file = os.path.join(DATA_DIR, file_name)
     if not os.path.exists(path_file):
-        return BadRequest
+        return BadRequest(description=f'{file_name} was not found')
 
     with open(path_file, encoding='utf-8') as file:
         res = build_query(file, cmd_1, val_1)
